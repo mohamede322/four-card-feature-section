@@ -1,0 +1,165 @@
+/* globals  */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+/* WIDTH */
+/* - Mobile: 375px
+- Desktop: 1440px */
+/* globals  */
+.project{
+    width: 1440px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--Very-Light-Gray);
+}
+@media(max-width:767px){
+    .project{
+        width: 100%;
+        height: 100%;
+    }
+}
+.project .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 30px;
+}
+.project .container header{
+    text-align: center;
+    width: 500px;
+}
+@media(max-width:767px){
+    .project .container header{
+        width: 100%;
+        padding: 20px;
+    }
+}
+.project .container header h1{
+    color: hsl(234, 12%, 45%);
+    font-weight: 200;
+    font-size: 30px;
+}
+@media(max-width:767px){
+    .project .container header h1{
+        font-size: 25px;
+    }
+}
+.project .container header h2{
+    color: var(--Very-Dark-Blue);
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+@media(max-width:767px){
+    .project .container header h2{
+        font-size: 25px;
+    }
+}
+.project .container header p{
+    color: var(--Grayish-Blue);
+}
+.project .container main{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-areas: ". two ." "one . four " " . three . ";
+    gap: 40px;
+    padding: 50px;
+}
+@media(max-width:767px){
+    .project .container main{
+        grid-template-areas: unset;
+        grid-template-columns: auto;
+        gap: 40px;
+        padding: 30px;
+    }
+}
+.project .container main .box{
+    padding: 50px;
+    padding-bottom: 150px;
+    position: relative;
+    background-color: white;
+    border-radius:10px;
+    box-shadow: 0 10px 10px #DDD;
+    border-top: solid 5px;
+}
+@media(max-width:767px){
+    .project .container main .box{
+        
+    }
+}
+.project .container main .box h3{
+    color: var(--Very-Dark-Blue);
+    padding-bottom:10px;
+}
+.project .container main .box p{
+    color: var(--Grayish-Blue);
+    line-height: 1.5;
+}
+.project .container main .box.one{
+    grid-area: one;
+    border-color: var(--Cyan);
+}
+@media(max-width:767px){
+    .project .container main .box.one{
+        grid-area: unset;
+    }
+}
+.project .container main .box.two{
+    grid-area: two;
+    margin-bottom: -160px;
+    border-color: var(--Red);
+}
+@media(max-width:767px){
+    .project .container main .box.box.two{
+        grid-area: unset;
+        margin-bottom: 0;
+    }
+}
+.project .container main .box.three{
+    grid-area: three;
+    margin-top: -160px;
+    border-color: var(--Orange);
+}
+@media(max-width:767px){
+    .project .container main .box.box.three{
+        grid-area: unset;
+        margin-top: 0;
+    }
+}
+.project .container main .box.four{
+    grid-area: four;
+    border-color: var(--Blue);
+}
+@media(max-width:767px){
+    .project .container main .box.box.four{
+        grid-area: unset;
+    }
+}
+.project .container main .box img{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    
+}
